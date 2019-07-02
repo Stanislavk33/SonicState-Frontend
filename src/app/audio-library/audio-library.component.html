@@ -1,0 +1,6 @@
+<p>audio-library works!</p>
+<div>
+  <div *ngFor="let audio of audios" (click)="showDetails(audio.key)">
+    {{audio.name}} {{audio.bpm}} {{audio.key}}
+  </div>
+</div>
