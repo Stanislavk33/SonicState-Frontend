@@ -25,5 +25,18 @@ export class HttpProxyService {
 
       return headers;
     }
+
+    public filePost<T>(url: string, data: any): Observable<T> {
+
+      return this.http.post<T>(url, data);
+    }
+
+    private fileHeaders(): HttpHeaders {
+      let headers = new HttpHeaders();
+      headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
+        debugger;
+      return headers;
+    }
+
   }
 

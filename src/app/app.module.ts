@@ -6,16 +6,21 @@ import { AppComponent } from './app.component';
 import { AudioLibraryComponent } from './audio-library/audio-library.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AudioService} from 'src/services/audio.service';
+import { AudioUploadComponent } from './audio-upload/audio-upload.component';
+import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AudioLibraryComponent
+    AudioLibraryComponent,
+    AudioUploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AudioService, HttpProxyService],
   bootstrap: [AppComponent]

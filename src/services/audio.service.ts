@@ -9,11 +9,6 @@ import { AudioDetails } from 'src/models/audio-details';
   providedIn: 'root'
 })
 
-
-@Injectable({
-  providedIn: 'root'
-})
-
 export class AudioService {
   private baseUrl: string = environment.url;
 
@@ -23,7 +18,7 @@ export class AudioService {
       return this.http.get<AudioDetails[]>(this.baseUrl + 'audio/list');
   }
 
- // public upload(data: any) {
-   // return this.http.post(this.baseUrl + 'audio/list', data);
-  //}
+   public upload(data: any) {
+     return this.http.filePost(this.baseUrl + 'audio/upload' , data);
+  }
 }
