@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
   {path: 'audio/list', component: AudioLibraryComponent},
   {path: 'audio/upload', component: AudioUploadComponent}
 ];

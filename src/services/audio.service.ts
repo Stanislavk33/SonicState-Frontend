@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { AudioDetails } from 'src/models/audio-details';
+import { ChordUnit } from 'src/models/chord-unit';
 
 
 @Injectable({
@@ -19,6 +20,12 @@ export class AudioService {
   }
 
    public upload(data: any) {
+    debugger;
      return this.http.filePost(this.baseUrl + 'audio/upload' , data);
+  }
+
+  public getAudioChords(id: string): Observable<ChordUnit[]>{
+    debugger;
+    return this.http.get(this.baseUrl + 'audio/songtutorial/' + id);
   }
 }

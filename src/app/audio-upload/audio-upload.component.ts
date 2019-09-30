@@ -26,9 +26,10 @@ export class AudioUploadComponent implements OnInit {
       let formData = new FormData();
       formData.append('audio', this.uploadForm.get('audio').value);
       debugger;
-      this.service.upload(formData).subscribe(isFinished => {
-         debugger;
-        });
+      this.service.upload(formData).subscribe(
+        (res) => console.log(res),
+        (err) => console.log(err)
+        );
   }
 
   onFileSelect(event) {
