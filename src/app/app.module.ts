@@ -8,12 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AudioService} from 'src/services/audio.service';
 import { AudioUploadComponent } from './audio-upload/audio-upload.component';
 import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AudioLibraryComponent,
-    AudioUploadComponent
+    AudioUploadComponent,
+    NavbarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

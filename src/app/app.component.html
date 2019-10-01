@@ -1,16 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
- </div>
-<ul>
-  <li>
-    <h2><a routerLink="audio/list" routerLinkActive="active" >Go To AudioLibrary</a></h2>
-  </li>
-  <li>
-    <h2><a routerLink="audio/upload" routerLinkActive="active" >Upload</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<section>
+    <div class="container md-6">
+        <router-outlet></router-outlet>
+    </div>
+</section>
