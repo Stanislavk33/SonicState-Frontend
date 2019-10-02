@@ -16,19 +16,21 @@ export class HttpProxyService {
 
     public post<T>(url: string, data: any): Observable<T> {
       const headers = this.defaultHeaders();
+
       return this.http.post<T>(url, data, { headers });
     }
 
     private defaultHeaders(): HttpHeaders {
       let headers = new HttpHeaders();
       headers = headers.set('Content-Type', 'application/json');
-
+      headers = headers.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
+      debugger;
       return headers;
     }
 
     public filePost<T>(url: string, data: any): Observable<T> {
-
-      return this.http.post<T>(url, data);
+      let headers = new HttpHeaders().append('Authorization', 'Bearer ' + localStorage.getItem('token'));
+      return this.http.post<T>(url, data, {headers});
     }
 
     private fileHeaders(): HttpHeaders {

@@ -20,12 +20,12 @@ export class AudioService {
   }
 
    public upload(data: any) {
-    debugger;
-     return this.http.filePost(this.baseUrl + 'audio/upload' , data);
+
+        return this.http.filePost(this.baseUrl + 'audio/upload' , data);
+
   }
 
-  public getAudioChords(id: string): Observable<ChordUnit[]>{
-    debugger;
+  public getAudioChords(id: string): Observable<ChordUnit[]> {
     return this.http.get(this.baseUrl + 'audio/songtutorial/' + id);
   }
 }

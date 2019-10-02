@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../services/authentication.service';
 import { HttpProxyService } from './../services/http-proxy.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { AudioUploadComponent } from './audio-upload/audio-upload.component';
 import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     AudioLibraryComponent,
     AudioUploadComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AudioService, HttpProxyService],
+  providers: [AudioService, HttpProxyService,AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
