@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       loginUser.email = this.loginForm.get('email').value;
       loginUser.password = this.loginForm.get('password').value;
 
-      debugger;
+      ;
       this.service.login(loginUser).subscribe(
         token => {
           this.service.setToken(token);

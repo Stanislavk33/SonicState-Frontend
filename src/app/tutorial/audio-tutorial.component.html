@@ -1,0 +1,12 @@
+
+<div style="width: 50% ; float:right">
+<div *ngIf="chordTutorial != null && chordTutorial != undefined">
+  <span id = "current-chord"style="color: #582841; font-weight: bold;">{{chordTutorial.currentChord}}</span>
+  <span id="next-chord" style="float: right; color: #CC2A49;; font-weight: bold;">{{chordTutorial.nextChord}}</span>
+</div>
+<div>
+  <div>
+    <mat-progress-bar  mode="determinate" [value]="progress" color="primary"></mat-progress-bar>
+  </div>
+</div>
+</div>

@@ -1,7 +1,7 @@
 export class ChordUnit {
-  time: number;
+  public time: number;
 
-  chord: string;
+  public chord: string;
 
   audioId: string;
 

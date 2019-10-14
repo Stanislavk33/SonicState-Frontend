@@ -24,7 +24,7 @@ export class HttpProxyService {
       let headers = new HttpHeaders();
       headers = headers.set('Content-Type', 'application/json');
       headers = headers.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
-      debugger;
+
       return headers;
     }
 
@@ -33,10 +33,14 @@ export class HttpProxyService {
       return this.http.post<T>(url, data, {headers});
     }
 
+    public getToken():string{
+      return localStorage.getItem('token');
+  }
+
     private fileHeaders(): HttpHeaders {
       let headers = new HttpHeaders();
       headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
-        debugger;
+
       return headers;
     }
 

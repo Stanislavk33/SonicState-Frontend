@@ -1,7 +1,7 @@
-import { AudioService } from './../../services/audio.service';
+import { AudioService } from '../../services/audio.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-audio-upload',
@@ -10,10 +10,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AudioUploadComponent implements OnInit {
 
-  uploadForm: FormGroup;
-
-  constructor(private service: AudioService, private formBuilder: FormBuilder) {
+  constructor(private service: AudioService, private formBuilder: FormBuilder, private router: Router) {
   }
+
+  uploadForm: FormGroup;
+   fileName = "Choose File";
 
 
   ngOnInit() {
@@ -23,19 +24,22 @@ export class AudioUploadComponent implements OnInit {
   }
 
   OnSubmit() {
-      let formData = new FormData();
-      formData.append('audio', this.uploadForm.get('audio').value);
-      debugger;
-      this.service.upload(formData).subscribe(
-        (res) => console.log(res),
-        (err) => console.log(err)
-        );
+    let formData = new FormData();
+    formData.append('audio', this.uploadForm.get('audio').value);
+    this.service.upload(formData).subscribe(() => this.router.navigate(['audio/list']) );
   }
 
   onFileSelect(event) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
+      this.fileName = event.target.files[0].name;
       this.uploadForm.get('audio').setValue(file);
     }
   }
+
+
 }
+
+
+
+

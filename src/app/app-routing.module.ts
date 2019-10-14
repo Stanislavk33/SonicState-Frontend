@@ -1,9 +1,8 @@
 import { LoginComponent } from './login/login/login.component';
-import { AudioUploadComponent } from './audio-upload/audio-upload.component';
-import { AudioLibraryComponent } from './audio-library/audio-library.component';
+import { AudioUploadComponent } from './upload/audio-upload.component';
+import { AudioLibraryComponent } from './library/audio-library.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -11,6 +10,7 @@ const routes: Routes = [
   {path: 'audio/upload', component: AudioUploadComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent}
+
 ];
 
 @NgModule({

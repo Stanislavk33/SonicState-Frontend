@@ -1,0 +1,30 @@
+
+<div>
+  <div class="container">
+    <table class="table">
+      <tr>
+          <th>Name</th>
+          <th>Format</th>
+          <th>Tempo</th>
+          <th>Key</th>
+          <th>Difficulty</th>
+          <th>   </th>
+      </tr>
+      <tr *ngFor="let audio of audios" >
+          <td>{{audio.name}}</td>
+          <td> {{audio.format}} </td>
+          <td >{{audio.bpm.toFixed()}}</td>
+          <td>{{audio.key}}</td>
+          <td>{{audio.hazard}}</td>
+          <td >
+            <button type="button" id="button_play" class="btn" (click)='buttonPlayPress(audio)'>
+              <i class="fa fa-play"></i>
+            </button>
+          </td>
+      </tr>
+
+    </table>
+    </div>
+
+
+    <app-audio-player  [audio] = "audioToPlay"> </app-audio-player>

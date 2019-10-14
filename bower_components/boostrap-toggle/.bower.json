@@ -1,0 +1,15 @@
+{
+  "name": "boostrap-toggle",
+  "homepage": "https://github.com/Nijikokun/bootstrap-toggle",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "9f48c9bbd11019fe23e7b2db8058ce3409c1f7ce"
+  },
+  "_source": "https://github.com/Nijikokun/bootstrap-toggle.git",
+  "_target": "^1.0.0",
+  "_originalSource": "boostrap-toggle",
+  "_direct": true
+}

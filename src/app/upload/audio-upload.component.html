@@ -1,0 +1,19 @@
+
+    <form id=uploadForm (ngSubmit)="OnSubmit()">
+<div class="input-group image-preview">
+    <input placeholder="" type="text" [value] = fileName class="form-control image-preview-filename" disabled="">
+    <!-- don't give a name === doesn't send on POST/GET -->
+
+    <span class="input-group-btn">
+    <!-- image-preview-clear button -->
+    <button type="button" class="btn btn-default image-preview-clear" style="display:none;"> <span class="glyphicon glyphicon-remove"></span> Clear </button>
+    <!-- image-preview-input -->
+
+    <div class="btn btn-default image-preview-input"> <span class="glyphicon glyphicon-folder-open"></span> <span class="image-preview-input-title">Browse</span>
+      <input type="file" accept="" name="audio" (change)= "onFileSelect($event)">
+      <!-- rename it -->
+    </div>
+    <button type="submit" class="btn btn-labeled btn-default"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
+    </span> </div>
+
+  </form>

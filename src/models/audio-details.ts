@@ -3,6 +3,7 @@ export class AudioDetails {
   public name: string;
   public bpm: number;
   public key: string;
-  public storageName: string;
-
+  public hazard: string;
+  public format: string;
 }
+
